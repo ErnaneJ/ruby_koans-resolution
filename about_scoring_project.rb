@@ -57,6 +57,8 @@ def score(dice)
         score+= cont*50
       end
     end
+
+    ja_ocorreu<<element
   end
   score
 end
