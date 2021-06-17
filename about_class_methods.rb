@@ -3,7 +3,6 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 class AboutClassMethods < Neo::Koan
   class Dog
   end
-
   def test_objects_are_objects
     fido = Dog.new
     assert_equal __, fido.is_a?(Object)
