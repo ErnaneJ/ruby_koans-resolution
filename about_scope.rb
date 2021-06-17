@@ -43,8 +43,8 @@ class AboutScope < Neo::Koan
   end
 
   def test_nested_string_is_not_the_same_as_the_system_string
-     # puts String # > AboutScope::String
-     # puts "HI".class # > String
+     # puts String  > AboutScope::String
+     # puts "HI".class  > String
     assert_equal false, String == "HI".class
   end
 
