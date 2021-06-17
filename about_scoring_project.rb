@@ -57,14 +57,6 @@ def score(dice)
         score+= cont*50
       end
     end
-
-    ja_ocorreu<<element
-    puts "Verificando #{element}"
-    puts "Contador #{cont}"
-    puts "Score #{score}"
-    puts "ja ocorreu #{ja_ocorreu}"
-    puts dice
-    puts "--------------------------"
   end
   score
 end
