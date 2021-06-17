@@ -31,6 +31,42 @@ require File.expand_path(File.dirname(__FILE__) + '/neo')
 
 def score(dice)
   # You need to write this method
+  ja_ocorreu = []
+  score = 0
+  for element in dice
+    cont = 0
+    for element2 in dice
+      if element == element2 && (ja_ocorreu.include? element) == false
+      cont +=1
+      end
+    end
+    if cont != 0
+      if cont>=3
+        while cont>=3
+          if  element == 1
+            score+=1000
+          else 
+            score +=element*100
+          end
+          cont-=3
+        end
+      end
+      if element == 1
+        score += cont*100
+      elsif element == 5
+        score+= cont*50
+      end
+    end
+
+    ja_ocorreu<<element
+    puts "Verificando #{element}"
+    puts "Contador #{cont}"
+    puts "Score #{score}"
+    puts "ja ocorreu #{ja_ocorreu}"
+    puts dice
+    puts "--------------------------"
+  end
+  score
 end
 
 class AboutScoringProject < Neo::Koan
